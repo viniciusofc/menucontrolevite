@@ -2,6 +2,7 @@ import { PhotoIcon, UserCircleIcon } from '@heroicons/react/24/solid'
 import { useState } from 'react';
 import CurrencyFormat from './Functions/formatCurrency';
 import imagemAtero from '../src/assets/image-atero.jpg'
+import Sidebar from './components/sidebar/sidebar';
 
 
 function App() {
@@ -57,7 +58,9 @@ function App() {
 
 
   return (
-    <section className='mx-auto w-full h-full  bg-black'>
+    <>
+    <Sidebar />
+    <section className='mx-auto w-full h-full'>
       <view className='flex mx-auto w-full h-5/6 justify-evenly'>
         
         <form className='w-3/5'>
@@ -282,6 +285,8 @@ function App() {
         </div>
       </view>
     </section >
+    </>
+    
 
   );
 }
