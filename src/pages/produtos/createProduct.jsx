@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 
 
-import Apresentation from '../mockupCel/apresentation';
+import Apresentation from '../../components/mockupCel/apresentation';
 
 const formData = {
     nome: 'Vazio',
