@@ -51,7 +51,7 @@ const segments = [
 const Apresentation = ({object}) => {
  
     return (
-        <div className="xl:w-60 lg:w-40 h-4/5  relative rounded-3xl overflow-hidden shadow-lg border-4 border-gray-300">
+        <div className="xl:w-60 lg:w-40 h-full  relative rounded-3xl overflow-hidden shadow-lg border-4 border-gray-300">
             {/* Tela do celular */}
             <div className="bg-white h-full w-full ">
                 <main className='mx-auto w-full bg-white' id='site-app'>

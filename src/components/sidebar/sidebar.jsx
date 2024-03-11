@@ -20,7 +20,7 @@ function Sidebar({ children }) {
     <div className="flex">
       <div
         className={` ${open ? "w-72" : "w-20 "
-          } bg-black h-screen p-5  pt-8 relative duration-300`}
+          } bg-zinc-900 h-screen p-5  pt-8 relative duration-300`}
       >
         <img
           src="/src/assets/control.png"
@@ -45,7 +45,7 @@ function Sidebar({ children }) {
           {Menus.map((Menu, index) => (
             <li
               key={index}
-              className={`flex  rounded-md p-2 cursor-pointer hover:bg-gray-500 text-gray-300 text-sm items-center gap-x-4 
+              className={`flex  rounded-md p-2 cursor-pointer hover:bg-zinc-800 text-gray-300 text-sm items-center gap-x-4 
             ${Menu.gap ? "mt-9" : "mt-2"} ${index === 0 && "bg-light-white"
                 } `}
             >
