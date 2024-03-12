@@ -259,7 +259,7 @@ const Table = () => {
 
     return (
         <div className="w-full  p-10">
-            <div class="relative max-h-96 max-w-4/5 overflow-x-auto shadow-md sm:rounded-lg">
+            <div class="relative h-2/4 max-w-4/5 overflow-x-auto shadow-md sm:rounded-lg">
                 <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                     <thead class="text-xs text-gray-500 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                         <tr>
@@ -306,7 +306,7 @@ const Table = () => {
                                                 {CurrencyFormat(item.price)}
                                             </td>
                                             <td class="px-6 py-4">
-                                                <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                                                <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Opções</a>
                                             </td>
                                         </tr>
                                     </>
