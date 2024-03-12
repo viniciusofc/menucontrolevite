@@ -5,8 +5,9 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import CreateProduct from '../pages/produtos/createProduct';
 
 //SIDEBAR
-import SideBar from '../components/sidebar/sidebar';
+import SideBar from '../components/sidebar/index';
 import NotFound from '../pages/404';
+import Table from '../components/table';
 
 
 
@@ -16,7 +17,11 @@ const routerPrivadas = createBrowserRouter([
         element: <NotFound />,
     },
     {
-        path: '/create/products',
+        path: '/products',
+        element: <Table />,
+    },
+    {
+        path: '/products2',
         element: <CreateProduct />,
     }
 

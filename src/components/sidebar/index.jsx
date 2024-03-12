@@ -4,15 +4,15 @@ import { useState } from "react";
 function Sidebar({ children }) {
   const [open, setOpen] = useState(true);
   const Menus = [
-    { title: "Home", src: "Chart_fill" },
-    { title: "Dashboard", src: "Chart_fill" },
-    { title: "Inbox", src: "Chat" },
-    { title: "Accounts", src: "User", gap: true },
-    { title: "Schedule ", src: "Calendar" },
-    { title: "Search", src: "Search" },
-    { title: "Analytics", src: "Chart" },
-    { title: "Files ", src: "Folder", gap: true },
-    { title: "Setting", src: "Setting" },
+    { title: "Home", src: "Home" },
+    { title: "Seu Painel", src: "Painel" },
+    // { title: "Inbox", src: "Chat" },
+    { title: "Seu Perfil", src: "User", gap: true },
+    { title: "Produto", src: "Product" },
+    { title: "Segmento", src: "Categories" },
+    { title: "Análise", src: "Analytics" },
+    // { title: "Files ", src: "Folder", gap: true },
+    { title: "Sair", src: "Logout", gap: true },
   ];
 
 
