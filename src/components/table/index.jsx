@@ -258,10 +258,10 @@ const dados = [
 const Table = () => {
 
     return (
-        <div className="h-3/4  p-10">
-            <div class="relative max-h-full max-w-4/5 overflow-x-auto shadow-md sm:rounded-lg">
+        <div className="w-full  p-10">
+            <div class="relative max-h-96 max-w-4/5 overflow-x-auto shadow-md sm:rounded-lg">
                 <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-                    <thead class="text-xs text-gray-900 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                    <thead class="text-xs text-gray-500 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                         <tr>
                             <th scope="col" class="px-6 py-3">
                                 Nome Produto
@@ -290,7 +290,7 @@ const Table = () => {
                                 return (
                                     <>
                                         <tr class="bg-white border-b bg-zinc-900 dark:border-gray-700">
-                                            <th scope="row" class="px-6 py-4 font-medium text-gray-300 whitespace-nowrap dark:text-white">
+                                            <th scope="row" class="px-6 py-4 font-medium text-gray-600 whitespace-nowrap dark:text-white">
                                                 {item.name}
                                             </th>
                                             <td class="px-6 py-4">
