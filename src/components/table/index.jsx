@@ -335,7 +335,7 @@ const Table = () => {
                             <div class=" bg-zinc-900 p-5">
                                 <div class="sm:flex sm:items-start">
                                     <div class="text-center sm:mt-0 sm:ml-2 sm:text-left">
-                                        <h3 class="text-sm leading-6 font-medium text-gray-400">Segmentos</h3>
+                                        <h3 class="text-sm leading-6 font-medium text-gray-400">Total Segmentos</h3>
                                         <Counter maxValue={15} />
                                     </div>
                                 </div>
@@ -345,7 +345,7 @@ const Table = () => {
                             <div class=" bg-zinc-900 p-5">
                                 <div class="sm:flex sm:items-start">
                                     <div class="text-center sm:mt-0 sm:ml-2 sm:text-left">
-                                        <h3 class="text-sm leading-6 font-medium text-gray-400">Ativos</h3>
+                                        <h3 class="text-sm leading-6 font-medium text-gray-400">Produtos Ativos</h3>
                                         <Counter maxValue={96} type={"%"} />
                                     </div>
                                 </div>
