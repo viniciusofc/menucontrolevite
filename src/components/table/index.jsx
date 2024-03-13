@@ -260,7 +260,7 @@ const Table = () => {
 
     return (
         <div className="flex flex-col justify-between h-screen w-full  max-h-screen p-5">
-            <div class="relative h-96 max-w-4/5 overflow-auto shadow-md sm:rounded-lg  mt-5">
+            <div class="relative h-[32rem] max-w-4/5 overflow-auto shadow-md sm:rounded-lg  mt-5">
                 <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                     <thead class="text-xs text-gray-500 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400 sticky top-0 bg-white">
                         <tr>
