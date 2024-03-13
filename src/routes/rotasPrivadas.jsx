@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 //PAGINAS
 import CreateProduct from '../pages/produtos/createProduct';
@@ -7,32 +6,23 @@ import CreateProduct from '../pages/produtos/createProduct';
 //SIDEBAR
 import SideBar from '../components/sidebar/index';
 import NotFound from '../pages/404';
+import Home from '../pages/home';
 import Table from '../components/table';
 
+import { Route, Routes } from 'react-router-dom';
 
-
-const routerPrivadas = createBrowserRouter([
-    {
-        path: '/*',
-        element: <NotFound />,
-    },
-    {
-        path: '/products',
-        element: <Table />,
-    },
-    {
-        path: '/products2',
-        element: <CreateProduct />,
-    }
-
-])
 
 const rotasPrivadas = () => {
 
     return (
-        <SideBar >
-            {/* <Loading /> */}
-            <RouterProvider router={routerPrivadas} />
+        <SideBar>
+            <Routes>
+                <Route exact path="/home" element={<Home />} />
+                <Route exact path="/products" element={<Table />} />
+                <Route exact path="/products2" element={<CreateProduct />} />
+                <Route path="*" element={<NotFound />} />
+            </Routes>
+
         </SideBar>
     )
 }

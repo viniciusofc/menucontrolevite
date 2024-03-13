@@ -1,18 +1,19 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 
 function Sidebar({ children }) {
   const [open, setOpen] = useState(true);
   const Menus = [
-    { title: "Home", src: "Home" },
-    { title: "Seu Painel", src: "Painel" },
+    { title: "Home", src: "Home", url: "/home" },
+    { title: "Seu Painel", src: "Painel", url: "/home" },
     // { title: "Inbox", src: "Chat" },
-    { title: "Seu Perfil", src: "User", gap: true },
-    { title: "Produto", src: "Product" },
-    { title: "Segmento", src: "Categories" },
-    { title: "Análise", src: "Analytics" },
+    { title: "Seu Perfil", src: "User", url: "/home", gap: true },
+    { title: "Produtos", src: "Product", url: "/products" },
+    { title: "Segmentos", src: "Categories", url: "/home" },
+    { title: "Análise", src: "Analytics", url: "/home" },
     // { title: "Files ", src: "Folder", gap: true },
-    { title: "Sair", src: "Logout", gap: true },
+    { title: "Sair", src: "Logout", url: "/home", gap: true },
   ];
 
 
@@ -43,17 +44,20 @@ function Sidebar({ children }) {
         </div>
         <ul className="pt-6">
           {Menus.map((Menu, index) => (
-            <li
-              key={index}
-              className={`flex  rounded-md p-2 cursor-pointer hover:bg-zinc-800 text-gray-300 text-sm items-center gap-x-4 
+            <Link to={`${Menu.url}`}>
+              <li
+                key={index}
+                className={`flex  rounded-md p-2 cursor-pointer hover:bg-zinc-800 text-gray-300 text-sm items-center gap-x-4 
             ${Menu.gap ? "mt-9" : "mt-2"} ${index === 0 && "bg-light-white"
-                } `}
-            >
-              <img src={`/src/assets/${Menu.src}.png`} />
-              <span className={`${!open && "hidden"} origin-left duration-200 `}>
-                {Menu.title}
-              </span>
-            </li>
+                  } `}
+              >
+                <img src={`/src/assets/${Menu.src}.png`} />
+                <span className={`${!open && "hidden"} origin-left duration-200 `}>
+                  {Menu.title}
+                </span>
+
+              </li>
+            </Link>
           ))}
         </ul>
       </div>

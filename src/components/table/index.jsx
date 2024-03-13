@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import CurrencyFormat from '../../Functions/formatCurrency'
+import Counter from '../counter'
 
 const dados = [
     {
@@ -258,10 +259,10 @@ const dados = [
 const Table = () => {
 
     return (
-        <div className="w-full  p-10">
-            <div class="relative h-2/4 max-w-4/5 overflow-x-auto shadow-md sm:rounded-lg">
+        <div className="flex flex-col justify-between h-screen w-full  max-h-screen p-5">
+            <div class="relative h-96 max-w-4/5 overflow-auto shadow-md sm:rounded-lg  mt-5">
                 <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-                    <thead class="text-xs text-gray-500 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                    <thead class="text-xs text-gray-500 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400 sticky top-0 bg-white">
                         <tr>
                             <th scope="col" class="px-6 py-3">
                                 Nome Produto
@@ -279,7 +280,7 @@ const Table = () => {
                                 Preço
                             </th>
                             <th scope="col" class="px-6 py-3">
-                                Editar
+                                Opções
                             </th>
                         </tr>
                     </thead>
@@ -293,7 +294,7 @@ const Table = () => {
                                             <th scope="row" class="px-6 py-4 font-medium text-gray-600 whitespace-nowrap dark:text-white">
                                                 {item.name}
                                             </th>
-                                            <td class="px-6 py-4">
+                                            <td class="px-6 py-4 max-w-36 truncate">
                                                 {item.submenu}
                                             </td>
                                             <td class="px-6 py-4 max-w-72 max-h-16 break-all line-clamp-2 whitespace-nowrap">
@@ -306,7 +307,7 @@ const Table = () => {
                                                 {CurrencyFormat(item.price)}
                                             </td>
                                             <td class="px-6 py-4">
-                                                <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Opções</a>
+                                                <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Editar</a>
                                             </td>
                                         </tr>
                                     </>
@@ -317,7 +318,42 @@ const Table = () => {
                     </tbody>
                 </table>
             </div>
-
+            <div>
+                <div class="max-w-full mx-4 py-6 sm:mx-auto sm:px-6 lg:px-8">
+                    <div class="sm:flex sm:space-x-4">
+                        <div class="inline-block align-bottom  bg-zinc-900 rounded-lg text-left overflow-hidden shadow transform transition-all mb-4 w-full sm:w-1/3 sm:my-8">
+                            <div class=" bg-zinc-900 p-5">
+                                <div class="sm:flex sm:items-start">
+                                    <div class="text-center sm:mt-0 sm:ml-2 sm:text-left">
+                                        <h3 class="text-sm leading-6 font-medium text-gray-400">Total Produtos</h3>
+                                        <Counter maxValue={dados.length} />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="inline-block align-bottom  bg-zinc-900 rounded-lg text-left overflow-hidden shadow transform transition-all mb-4 w-full sm:w-1/3 sm:my-8">
+                            <div class=" bg-zinc-900 p-5">
+                                <div class="sm:flex sm:items-start">
+                                    <div class="text-center sm:mt-0 sm:ml-2 sm:text-left">
+                                        <h3 class="text-sm leading-6 font-medium text-gray-400">Segmentos</h3>
+                                        <Counter maxValue={15} />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="inline-block align-bottom  bg-zinc-900 rounded-lg text-left overflow-hidden shadow transform transition-all mb-4 w-full sm:w-1/3 sm:my-8">
+                            <div class=" bg-zinc-900 p-5">
+                                <div class="sm:flex sm:items-start">
+                                    <div class="text-center sm:mt-0 sm:ml-2 sm:text-left">
+                                        <h3 class="text-sm leading-6 font-medium text-gray-400">Ativos</h3>
+                                        <Counter maxValue={96} type={"%"} />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }
