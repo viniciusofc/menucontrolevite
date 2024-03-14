@@ -2,39 +2,39 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 
-const menuItems = [
-  { title: "Home", src: "Home", url: "/home", active: false },
-  { title: "Seu Painel", src: "Painel", url: "/teste", active: false },
-  // { title: "Inbox", src: "Chat" },
-  { title: "Seu Perfil", src: "User", url: "/teste", gap: true, active: false },
-  { title: "Produtos", src: "Product", url: "/products", active: false },
-  { title: "Segmentos", src: "Categories", url: "/teste", active: false },
-  { title: "Análise", src: "Analytics", url: "/teste", active: false },
-  // { title: "Files ", src: "Folder", gap: true },
-  { title: "Sair", src: "Logout", url: "/teste", gap: true, active: false },
-];
-
 function Sidebar({ children }) {
   const [open, setOpen] = useState(true);
-  const [items, setItems] = useState(menuItems);
+  const menuItems = [
+    { title: "Home", src: "Home", url: "/home", active: false },
+    { title: "Seu Painel", src: "Painel", url: "/teste", active: false },
+    // { title: "Inbox", src: "Chat" },
+    { title: "Seu Perfil", src: "User", url: "/teste", gap: true, active: false },
+    { title: "Produtos", src: "Product", url: "/products", active: false },
+    { title: "Segmentos", src: "Categories", url: "/teste", active: false },
+    { title: "Análise", src: "Analytics", url: "/teste", active: false },
+    // { title: "Files ", src: "Folder", gap: true },
+    { title: "Sair", src: "Logout", url: "/teste", gap: true, active: false },
+  ];
 
-  const currentUrl = window.location.pathname;
-
-  const marcarItemAtivo = () => {
-    console.log('entrei aqui 1')
-    const updatedItems = items.map(item => ({
-        ...item,
-        active: item.url === currentUrl
-    }));
-    setItems(updatedItems);
-};
+  function marcarItemAtivo() {
+    console.log('entrei aqui')
+    const currentUrl = window.location.pathname;
+    menuItems.forEach(item => {
+      if (item.url === currentUrl) {
+        item.active = true;
+      } else {
+        item.active = false;
+      }
+    });
+  }
 
   useEffect(() => {
     return () => {
       marcarItemAtivo()
     }
-  }, [currentUrl])
+  }, [])
 
+  console.log()
 
   return (
     <div className="flex">
@@ -62,7 +62,7 @@ function Sidebar({ children }) {
           </h1>
         </div>
         <ul className="pt-6">
-          {items.map((Menu, index) => (
+          {menuItems.map((Menu, index) => (
             <Link to={`${Menu.url}`} onClick={() => marcarItemAtivo()}>
               <li
                 key={index}
