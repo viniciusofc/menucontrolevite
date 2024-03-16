@@ -18,8 +18,7 @@ const rotasPrivadas = () => {
         <SideBar>
             <Routes>
                 <Route exact path="/home" element={<Home />} />
-                <Route exact path="/products" element={<Table />} />
-                <Route exact path="/products2" element={<CreateProduct />} />
+                <Route exact path="/products" element={<CreateProduct />} />
                 <Route path="*" element={<NotFound />} />
             </Routes>
 

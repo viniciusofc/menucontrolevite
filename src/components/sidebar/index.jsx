@@ -40,7 +40,7 @@ function Sidebar({ children }) {
     <div className="flex">
       <div
         className={` ${open ? "w-72" : "w-20 "
-          } bg-zinc-900 h-screen p-5  pt-8 relative duration-300`}
+          } bg-white h-screen p-5  pt-8 relative duration-300`}
       >
         <img
           src="/src/assets/control.png"
@@ -55,7 +55,7 @@ function Sidebar({ children }) {
               }`}
           />
           <h1
-            className={`text-white origin-left font-medium text-xl duration-200 ${!open && "scale-0"
+            className={`text-black origin-left font-medium text-xl duration-200 ${!open && "scale-0"
               }`}
           >
             Menu Vite
@@ -66,11 +66,11 @@ function Sidebar({ children }) {
             <Link to={`${Menu.url}`} onClick={() => marcarItemAtivo()}>
               <li
                 key={index}
-                className={`flex  rounded-md p-2 cursor-pointer hover:bg-zinc-800 text-gray-300 text-sm items-center gap-x-4 
-              ${Menu.gap ? "mt-9" : "mt-2"}  ${Menu.active && "bg-zinc-800"}`}
+                className={`flex rounded-md p-2 cursor-pointer hover:bg-zinc-100 text-black text-sm items-center gap-x-4 
+              ${Menu.gap ? "mt-9" : "mt-2"}  ${Menu.active && "bg-zinc-100"}`}
               >
-                <img src={`/src/assets/${Menu.src}.png`} />
-                <span className={`${!open && "hidden"} origin-left duration-200 `}>
+                <img src={`/src/assets/${Menu.src}.png`} className="grayscale"/>
+                <span className={`${!open && "hidden"} origin-left duration-200 font-semibold`}>
                   {Menu.title}
                 </span>
 

@@ -19,7 +19,7 @@ code {
 
 
 
-/* 
+
 [type='text']:focus,
 input:where(:not([type])):focus,
 [type='email']:focus,
@@ -38,7 +38,7 @@ textarea:focus,
 select:focus {
   outline: none !important;
   box-shadow: none !important;
-  border-color: inherit !important; /* Use 'inherit' ou a cor desejada para a borda */
+  border-color: inherit !important; /* Use 'inherit' ou a cor desejada para a borda 
 
   ::-webkit-scrollbar {
     width: 5px;
