@@ -8,7 +8,7 @@ const Table = ({ children, dados, headers, analytics }) => {
     return (
         <div className=" h-screen w-full max-h-screen p-5 bg-zinc-200">
             {children}
-            <div class="relative h-[32rem] max-w-4/5 flex-shrink-0 max-w-4/5 max-h-80 overflow-auto shadow-md sm:rounded-lg">
+            <div class="relative h-96 max-w-4/5 flex-shrink-0 max-w-4/5  overflow-auto shadow-md sm:rounded-lg">
                 <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                     <thead class="text-xs text-gray-100 uppercase  sticky top-0 bg-black ">
                         <tr>
