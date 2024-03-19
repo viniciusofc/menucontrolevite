@@ -6,12 +6,12 @@ function Sidebar({ children }) {
   const [open, setOpen] = useState(true);
   const menuItems = [
     { title: "Home", src: "Home", url: "/home", active: false },
-    { title: "Seu Painel", src: "Painel", url: "/teste", active: false },
+    { title: "Seu Painel", src: "Painel", url: "/analicts", active: false },
     // { title: "Inbox", src: "Chat" },
-    { title: "Seu Perfil", src: "User", url: "/teste", gap: true, active: false },
+    { title: "Seu Perfil", src: "User", url: "/profile", gap: true, active: false },
     { title: "Produtos", src: "Product", url: "/products", active: false },
-    { title: "Segmentos", src: "Categories", url: "/teste", active: false },
-    { title: "Análise", src: "Analytics", url: "/teste", active: false },
+    { title: "Segmentos", src: "Categories", url: "/segments", active: false },
+
     // { title: "Files ", src: "Folder", gap: true },
     { title: "Sair", src: "Logout", url: "/teste", gap: true, active: false },
   ];
